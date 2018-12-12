@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Second Display Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <section class="container">
+        
     <?php
 
         $target_dir = "images/";
 
-        foreach ($_FILES as $file) {
+        foreach ($_FILES as $file) { 
             $target_file = $target_dir . basename($file["name"]);
-            move_uploaded_file($file["tmp_name"], $target_file);
-            echo "<img src=\"$target_file\">";
-        }
+            move_uploaded_file($file["tmp_name"], $target_file); ?>
+            <div class="image">
+            <?php echo "<img src=\"$target_file\">"; ?>
+            </div>
+        <?php }
 
     ?>
+    
+    </section>
 </body>
 </html>

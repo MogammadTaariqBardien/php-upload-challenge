@@ -18,7 +18,7 @@
     <form action="upload2.php" method="post" enctype="multipart/form-data">
     <input type="file" name="image">
     <input type="file" name="image2">
-    <input type="file" name="image2">
+    <input type="file" name="image3">
     <input type="submit">
     </form>
 
